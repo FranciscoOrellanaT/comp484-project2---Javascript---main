@@ -45,6 +45,7 @@
     var messages = [
     "TREAT! I love treats!",
     "All this exercise make me hungry...Treats!",
+    "Playing is fun!",
     "Exercising.....",
     "NOOOO! I don't want to exercise!",
     "Getting sleepy!",
@@ -62,7 +63,8 @@
       checkAndUpdatePetInfoInHtml();
 
       // Update the message and image to show that the pet is happy to get a treat
-      $('.message').text(messages[1]);
+      $('.messages').text(messages[1]);
+      //.attr() is a jQuery function that allows you to set the value of an attribute for the selected element. In this case, we are setting the 'src' attribute of the '.pet-image' element to 'images/eating.jpg', which will change the image displayed on the page to show that the pet is eating a treat.
       $('.pet-image').attr('src', 'images/eating.jpg');
 
     }
@@ -74,7 +76,7 @@
 
         // Not enough energy to play
         $('.pet-image').attr('src', 'images/sleepy.jpg');
-        $('.message').text(messages[5]);
+        $('.messages').text(messages[5]);
 
     } else {
       // Increase pet happiness
@@ -85,7 +87,7 @@
       checkAndUpdatePetInfoInHtml();
 
       // Update the message and image to show that the pet is happy to play
-      $('.message').text(messages[2]);
+      $('.messages').text(messages[2]);
       $('.pet-image').attr('src', 'images/playing.jpg');
 
       // Animate the pet image to move to the right and then back to the left
@@ -102,13 +104,13 @@
 
         // Pet has exercised too many times
         $('.pet-image').attr('src', 'images/angry.png');
-        $('.message').text(messages[4]);
+        $('.messages').text(messages[4]);
 
     } else if (pet_info.energy < 4) {
 
         // Pet does not have enough energy
         $('.pet-image').attr('src', 'images/sleepy.jpg');
-        $('.message').text(messages[5]);
+        $('.messages').text(messages[5]);
 
     } else {
 
@@ -123,10 +125,15 @@
       checkAndUpdatePetInfoInHtml();
       
       // Update the message and image to show that the pet is unhappy to exercise
-      $('.message').text(messages[3]);
+      $('.messages').text(messages[3]);
       $('.pet-image').attr('src', 'images/workout.jpg');
 
       // Animate the pet image to move to the left and then back to the right
+      // "$" calls the jQuery function, which is used to select elements in the HTML document. In this case, we are selecting the element with the class "pet-image". The animate() function is then called on this element to animate its 'left' property to move it 20 pixels to the left and then back to its original position.
+      //('.pet-image') selects the HTML element with the class "pet-image". The animate() function is then called on this element to animate its 'left' property to move it 20 pixels to the left and then back to its original position.
+      //{left: '-20px'} specifies the CSS property to animate (in this case, the 'left' property) and the value to animate it to (in this case, -20 pixels). The second argument (1000) specifies the duration of the animation in milliseconds (in this case, 1 second). Can also be written as {width: '-20px'} to increase the width of the element by 20 pixels.
+      // 1000 can also be written as 1s to specify the duration in seconds. The animate() function can be called multiple times in a row to create a sequence of animations. In this case, we are calling it twice to move the pet image to the left and then back to its original position.
+      //for loop is used to repeat the animation 3 times. The loop will run 3 times, and each time it runs, it will animate the pet image to move to the left and then back to its original position.
       for (var i = 0; i < 3; i++) {
       $('.pet-image').animate({left: '-20px'}, 1000);
       $('.pet-image').animate({left: '0px'}, 1000);
@@ -147,13 +154,13 @@
       // Restore pet happiness
       pet_info.happiness = pet_info.happiness + 100;
       // Reset happiness count to 0
-      happinessCount = 0;
+      //happinessCount = 0;
 
 
       checkAndUpdatePetInfoInHtml();
 
       // Update the message and image to show that the pet is happy to get a treat
-      $('.message').text(messages[7]);
+      $('.messages').text(messages[7]);
       $('.pet-image').attr('src', 'images/sleeping.jpg');
 
     }
@@ -177,9 +184,9 @@
       if (pet_info.happiness < 0) {
         pet_info.happiness = 0;
       }
-      // Add conditional so if happiness is greater than 100.
-      if (pet_info.happiness > 100) {
-        pet_info.happiness = 100;
+      // Add conditional so if happiness is greater than 200.
+      if (pet_info.happiness > 200) {
+      pet_info.happiness = 200;
       }
       // Add conditional so if energy is lower than zero or greater than 10.
       if (pet_info.energy < 0) {

@@ -33,8 +33,6 @@ body {
   p {
     max-width: 600px;
   }
-
-
   
   /* Container for the pet image */
   .pet-image-container {
@@ -79,8 +77,8 @@ body {
   button:hover {
     background-color: #187900;
   }
- /* Display pet message */
-.message {
+ /* Display pet messages */
+.messages {
     background-color: #6e6d6d;
     padding: 12px;
     margin-top: 20px;
