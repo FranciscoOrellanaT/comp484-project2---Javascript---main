@@ -1,0 +1,90 @@
+body {
+    font-family: 'Baloo 2', cursive, sans-serif;
+    /*font-family: Arial, sans-serif;*/
+    background-color: rgb(202, 202, 202);
+    color: #0f4100;
+    font-weight: 800;
+    text-align: center;
+    margin: 25px;
+  }
+  
+  main {
+    height: 600px;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+  }
+  
+  header {
+    border-bottom: 1px solid black;
+  }
+  
+  h1 {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  p {
+    max-width: 600px;
+  }
+
+
+  
+  /* Container for the pet image */
+  .pet-image-container {
+    padding:10px;
+  }
+
+  /* Pet image */
+  .pet-image {
+    width: 220px;
+    max-width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .dashboard div {
+    display:block;
+    margin-bottom: 10px;
+
+  }
+  .dashboard {
+    padding:20px;
+    background-color: #5aac75;
+    padding: 1px;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  
+  /* Style for the button */
+  button {
+    background-color: #8b8b8b;
+    color: white;
+    width: 120px;
+    font-size:20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+/* Button hover effect */
+  button:hover {
+    background-color: #187900;
+  }
+ /* Display pet message */
+.message {
+    background-color: #6e6d6d;
+    padding: 12px;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+}
