@@ -134,9 +134,9 @@
       //{left: '-20px'} specifies the CSS property to animate (in this case, the 'left' property) and the value to animate it to (in this case, -20 pixels). The second argument (1000) specifies the duration of the animation in milliseconds (in this case, 1 second). Can also be written as {width: '-20px'} to increase the width of the element by 20 pixels.
       // 1000 can also be written as 1s to specify the duration in seconds. The animate() function can be called multiple times in a row to create a sequence of animations. In this case, we are calling it twice to move the pet image to the left and then back to its original position.
       //for loop is used to repeat the animation 3 times. The loop will run 3 times, and each time it runs, it will animate the pet image to move to the left and then back to its original position.
-      for (var i = 0; i < 3; i++) {
-      $('.pet-image').animate({left: '-20px'}, 1000);
-      $('.pet-image').animate({left: '0px'}, 1000);
+      for (var i = 0; i < 2; i++) {
+      $('.pet-image').animate({left: '-20px'}, 100);
+      $('.pet-image').animate({left: '0px'}, 100);
       }
     }
     }
